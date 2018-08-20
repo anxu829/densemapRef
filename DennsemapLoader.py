@@ -42,6 +42,8 @@ if __name__ == "__main__":
 
     train_loader = DataLoader(train_dataset.transform(train_transform), batch_size = 2, shuffle=True, batchify_fn=batchify_fn)
     for ib, batch in enumerate(train_loader):
-        print(type(batch[0][0]) ,type(batch[0][1]) )
+        # batch[0] 是 X ， batch[1] 是 y
+        # batch[0][0] 是第0个X
+        print(type(batch[0][0]) ,type(batch[1][0]) )
     
     
